@@ -3,11 +3,11 @@ FROM nginx:latest
 
 RUN rm -rf /usr/share/nginx/html/*
 
-# define working directory
+# define working directory.
 WORKDIR /usr/share/nginx/html
 
 #copy from host to container
-COPY . /usr/share/nginx/html
+COPY . /usr/share/nginx/html/
 
 # Expose port 
 EXPOSE 80
