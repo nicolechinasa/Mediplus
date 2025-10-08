@@ -37,11 +37,11 @@ jobs:
           chmod 600 mykey.pem
           cat mykey.pem
 
-          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@54.196.147.76 "docker pull 153227617834.dkr.ecr.us-east-1.amazonaws.com/medplus:${{ github.run_number }}"
+          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@3.93.170.214 "docker pull 153227617834.dkr.ecr.us-east-1.amazonaws.com/medplus:${{ github.run_number }}"
 
-                    ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@54.196.147.76 "docker rm -f medplus"
+                    ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@3.93.170.214 "docker rm -f medplus"
 
-          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@54.196.147.76 "docker run -d --name medplus -p 80:80 153227617834.dkr.ecr.us-east-1.amazonaws.com/medplus:${{ github.run_number }}"
+          ssh -o StrictHostKeyChecking=no -i mykey.pem ubuntu@3.93.170.214 "docker run -d --name medplus -p 80:80 153227617834.dkr.ecr.us-east-1.amazonaws.com/medplus:${{ github.run_number }}"
 
 
 
